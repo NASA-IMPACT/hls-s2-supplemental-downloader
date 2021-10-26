@@ -21,7 +21,7 @@ def query_rds_for_undownloaded_urls():
     client = boto3.client('secretsmanager')
     
     response = client.get_secret_value(
-            SecretId="proddownloaderrdsSecretDF00-wKArFvU5NVqp"
+            SecretId=os.environ("SecretID")
     )
     
     secretDict = json.loads(response['SecretString'])
