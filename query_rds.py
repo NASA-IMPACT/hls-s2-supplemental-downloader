@@ -1,8 +1,8 @@
 import argparse
 import boto3
-import psycopg2
 import json
 import os
+import psycopg2
 import sys
 
 def query_rds_for_undownloaded_urls():
